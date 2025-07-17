@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzm. Dr. Celal Ağaoğlu | Çocuk Sağlığı ve Hastalıkları • Cizre</title>
+  <meta name="description" content="Cizre'de 20+ yıllık deneyimle güvenilir çocuk sağlığı hizmeti – randevu: 0532 646 35 95">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {--primary:#0c7ac7;--secondary:#f2f6fa;--accent:#ff7a59;--text:#333;}
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {color:var(--text);}
+    /* Header */
+    header {background:#fff;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;position:sticky;top:0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,.1);}
+    .logo {font-size:1.5rem;font-weight:600;color:var(--primary);}
+    #menu-btn {display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;}
+    @media(max-width:768px) {#menu-btn {display:block;} nav {display:none;position:absolute;top:64px;right:1rem;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);} nav.show {display:block;} nav ul {flex-direction:column;gap:1rem;}}
+    /* Navigation Buttons */
+    nav ul {list-style:none;display:flex;gap:1rem;}
+    .nav-btn {display:inline-block;padding:0.6rem 1.2rem;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;border-radius:30px;font-weight:500;cursor:pointer;transition:opacity .3s,transform .3s;}
+    .nav-btn:hover {opacity:.9;transform:translateY(-2px);}
+    /* Hero */
+   .hero {height:80vh;background:url('anasayfa.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;}
+    .hero::before {content:'';position:absolute;inset:0;background:rgba(0,0,0,.4);}
+    .hero-content {position:relative;color:#fff;text-align:center;max-width:600px;padding:0 1rem;}
+    .hero-content h1 {font-size:2.4rem;margin-bottom:1rem;}
+    .hero-content p {font-size:1.1rem;margin-bottom:2rem;}
+    .btn-primary {background:var(--primary);color:#fff;padding:.8rem 1.6rem;border:none;border-radius:30px;cursor:pointer;transition:.3s;}
+    .btn-primary:hover {background:#095f99;}
+    /* Sections */
+        section {padding:4rem 2rem; max-width:1100px; margin:auto;}
+        .section-title {font-size:2rem; margin-bottom:2rem; text-align:center; color:var(--primary);}        
+        /* About */
+        .about {display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center;}
+        .about img {width:100%; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,.1);}        
+        .about p {line-height:1.6;}
+        @media (max-width:768px){.about{grid-template-columns:1fr;}}
+        /* Services */
+        .services {display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem;}
+        .service-card {background:var(--secondary); padding:2rem; border-radius:12px; text-align:center; transition:.3s; box-shadow:0 2px 4px rgba(0,0,0,.05);}        
+        .service-card:hover {transform:translateY(-5px);}        
+        .service-card h3 {margin:1rem 0; font-size:1.2rem; color:var(--primary);}        
+        /* CTA */
+        .cta {background:var(--primary); color:#fff; text-align:center; padding:3rem 2rem; border-radius:12px;}
+        .cta h2 {margin-bottom:1rem; font-size:2rem;}
+        .cta p {margin-bottom:2rem;}        
+        /* Blog */
+        .blog {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem;}
+        .blog-card {border:1px solid #e5e5e5; border-radius:12px; overflow:hidden; transition:.3s; box-shadow:0 2px 4px rgba(0,0,0,.05);}        
+        .blog-card img {width:100%; height:180px; object-fit:cover;}
+        .blog-card .content {padding:1.5rem;}
+        .blog-card h4 {margin-bottom:.5rem; color:var(--primary);}        
+        /* Footer */
+        footer {background:#111; color:#fff; padding:2rem; text-align:center;}
+        footer a {color:var(--primary);}    
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">Uzm. Dr. <span>Celal Ağaoğlu</span></div>
+    <button id="menu-btn"><i class="fas fa-bars"></i></button>
+    <nav id="nav">
+      <ul>
+        <li><button class="nav-btn" onclick="location.href='#home'">Anasayfa</button></li>
+        <li><button class="nav-btn" onclick="location.href='#about'">Hakkında</button></li>
+        <li><button class="nav-btn" onclick="location.href='#services'">Hizmetler</button></li>
+        <li><button class="nav-btn" onclick="location.href='#blog'">Blog</button></li>
+        <li><button class="nav-btn" onclick="location.href='#contact'">İletişim</button></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Sağlıklı Çocuklar, Mutlu Aileler</h1>
+            <p>Cizre'de 20+ yıllık tecrübe ile güvenilir pediatrik bakım.</p>
+            <a href="#contact" class="btn-primary">Hemen Randevu Al</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" data-aos="fade-up">
+      <h2 class="section-title">Dr. Celal Ağaoğlu Hakkında</h2>
+      <div class="about">
+        <img src="doktor.jpg" alt="Dr. Celal Ağaoğlu">
+        <div>
+          <p><strong>Uzm. Dr. Celal Ağaoğlu</strong>, Musul Üniversitesi Tıp Fakültesi (İngilizce) mezunu olup, Hacettepe Üniversitesi'nde Çocuk Sağlığı ve Hastalıkları uzmanlığını tamamlamıştır. 1997'dan bu yana bebek, çocuk ve ergenlerde koruyucu hekimlik, tanı-tedavi, gelişimsel değerlendirme ve aile eğitimi alanlarında hizmet vermektedir.</p>
+          <ul>
+		  <li>
+    <strong>Eğitim:</strong>
+   İlk , orta , lise okulunu kerkükte bitirdikten sonra musul üniversitesinden İngilizce tıp fakültesinden mezun olup Hacettepe üniversitesinde de çocuk sağlığı ve uzamnlığını tamamlamıştır.1997'den beri çocuk sağlığı ve hastaıkları uzmanı olarak hizmet vermektedir.
+  </li>
+  <li>
+    <strong>İş Alanları:</strong>
+    1988 – Tokat/Reşadiye Hasan Şeyh Sağlık Ocağı,  
+    1992-1997 – Hacettepe Üniversitesi Tıp Fakültesi Çocuk Sağlığı ve Hastalıkları Uzmanı,  
+    1997 – Ankara Bayındır Özel Hastanesi Çocuk Sağlığı ve Hastalıkları Uzmanı,  
+    1998-2011 – Cizre Dr. Selahattin Cizrelioğlu Devlet Hastanesi Çocuk Uzmanı,  
+    2012-günümüz – Cizre’deki özel kliniğinde devam ediyor.
+  </li>
+<li>
+    <strong>Kurslar:</strong>
+    Yenidoğan Yoğun Bakım Kursu (Ankara);  
+    9 Eylül Üniversitesi Metabolizma Sempozyumu;  
+    Milli Pediatri Kongresi katılımı.
+  </li>
+  <li>
+    <strong>Kişisel Bilgiler:</strong>
+    Türk asıllı, Kerkük doğumlu
+  </li>
+  
+<li>
+    <strong>Hobiler:</strong>
+    Voleybol, doğa yürüyüşü, yüzme
+  </li>
+            
+            
+           
+            
+           
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2 class="section-title">Başlıca Hizmetler</h2>
+        <div class="services">
+            <div class="service-card"><h3>Aşı Takvimi</h3><p>Güncel aşılama programı.</p></div>
+            <div class="service-card"><h3>Yeni Doğan İzlemi</h3><p>Büyüme‑beslenme ve sarılık takibi.</p></div>
+            <div class="service-card"><h3>Gelişimsel Tarama</h3><p>Motor ve bilişsel beceri değerlendirmesi.</p></div>
+            <div class="service-card"><h3>Beslenme Danışmanlığı</h3><p>Dengeli beslenme ve kilo yönetimi.</p></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Randevu ve Bilgi İçin</h2>
+        <p>Kliniğimiz hafta içi + cumartesi  09:00‑18:00 arasında açıktır.</p>
+        <a href="tel:+905326463595" class="btn-primary">0532 646 35 95</a>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+        <h2 class="section-title">Sağlık Rehberi</h2>
+        <div class="blog">
+            <div class="blog-card">
+                <img src="blog-uyku.jpg" alt="Uyuyan Bebek">
+                <div class="content">
+                    <h4>Bebeklerde Uyku Düzeni</h4>
+                    <p>İlk aylarda sağlıklı uyku alışkanlıkları oluşturma ipuçları.</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="blog-asi.jpg" alt="Bebek Aşı Oluyor">
+                <div class="content">
+                    <h4>Aşıların Önemi</h4>
+                    <p>Çocukluk çağı aşı takvimi ve koruyucu etkileri.</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="blog-beslenme.jpg" alt="Sağlıklı Atıştırmalık">
+                <div class="content">
+                    <h4>Sağlıklı Beslenme Önerileri</h4>
+                    <p>Okul çağındaki çocuklar için dengeli beslenme tüyoları.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">İletişim Bilgileri</h2>
+        <div class="about">
+            <div>
+                <p><strong>Adres:</strong><br>Meydan İş Merkezi, Kat 2 No 11<br>Hastane Cadddesi Şok Market Yanı<br>Dicle Mahallesi, 73200 Cizre/Şırnak</p>
+               <p><strong>Telefon:</strong><br>
+  📞<a href="tel:+904866163595"> 0486 616 85 05</a><br>
+   📞<a href="tel:+905326463595"> 0532 646 35 95</a><br>
+   📞<a href="tel:+905054891298">0505 489 12 98</a>
+ </p>
+               <p><strong>E-posta:</strong> <a href="mailto:cagaoglu73@gmail.com">cagaoglu73@gmail.com</a></p>
+            </div>
+            <iframe src="https://maps.google.com/maps?q=Meydan%20İş%20Merkezi%20Cizre&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Uzm. Dr. Celal Ağaoğlu. Tüm hakları saklıdır. | Tasarım: Emir Ağaoğlu</p>
+</footer>
+
+<script>
+    const nav = document.getElementById('nav');
+    document.getElementById('menu-btn').addEventListener('click', () => nav.classList.toggle('show'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
